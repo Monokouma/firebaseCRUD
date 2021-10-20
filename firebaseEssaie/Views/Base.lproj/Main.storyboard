@@ -155,6 +155,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="AlD-I5-KkB">
+                                        <rect key="frame" x="133" y="248.5" width="37" height="0.0"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpQ-js-MeT">
                                         <rect key="frame" x="125" y="264" width="53" height="35"/>
                                         <state key="normal" title="Button"/>
@@ -187,8 +191,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="AlD-I5-KkB" id="Awq-f5-mMP"/>
                         <outlet property="emailField" destination="ST9-3m-rgI" id="KAy-Nb-5Fg"/>
                         <outlet property="passwordField" destination="hwO-lA-Dal" id="uFu-kX-qfr"/>
+                        <outlet property="submitButton" destination="xpQ-js-MeT" id="mKp-Hy-Qbx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ag8-KE-Ppx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -215,25 +221,25 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="3mT-mf-kE4">
-                                <rect key="frame" x="20" y="348" width="374" height="200"/>
+                                <rect key="frame" x="20" y="348" width="374" height="164"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wanna change your email adress ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d47-cp-zr9">
-                                        <rect key="frame" x="23" y="0.0" width="328" height="25"/>
+                                        <rect key="frame" x="23" y="0.0" width="328" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ohv-lu-7NO">
-                                        <rect key="frame" x="40" y="62" width="294" height="43"/>
+                                        <rect key="frame" x="40" y="57.5" width="294" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="7US-VJ-Ejs">
-                                        <rect key="frame" x="168.5" y="123.5" width="37" height="0.0"/>
+                                        <rect key="frame" x="168.5" y="111" width="37" height="0.0"/>
                                         <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3w-E0-qPX">
-                                        <rect key="frame" x="152" y="142" width="70" height="58"/>
+                                        <rect key="frame" x="152" y="129.5" width="70" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Submit">
                                             <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -248,16 +254,46 @@
                                     <constraint firstAttribute="trailing" secondItem="ohv-lu-7NO" secondAttribute="trailing" constant="40" id="msH-Ox-AKQ"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="XAb-Ch-Uho">
+                                <rect key="frame" x="100" y="712" width="214" height="127"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wanna delete account ? (Irreversible)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpd-bI-RJj">
+                                        <rect key="frame" x="13.5" y="0.0" width="187" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Psk-yp-Pro">
+                                        <rect key="frame" x="97" y="41.5" width="20" height="0.0"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sle-OR-cuh">
+                                        <rect key="frame" x="64" y="96" width="86" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Delete it !">
+                                            <color key="baseBackgroundColor" red="0.69983166456222534" green="0.13256514072418213" blue="0.0872453972697258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteButtonPressed:" destination="Vmg-5W-e2L" eventType="touchUpInside" id="fua-ax-EN2"/>
+                                            <segue destination="SC0-1d-U64" kind="unwind" unwindAction="unwindToWelcomeWithSegue:" id="i0a-CK-R7R"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sLJ-Lw-K2Y"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="XAb-Ch-Uho" firstAttribute="top" secondItem="3mT-mf-kE4" secondAttribute="bottom" constant="200" id="3Ol-DZ-sg4"/>
                             <constraint firstItem="3mT-mf-kE4" firstAttribute="top" secondItem="j89-jX-69e" secondAttribute="bottom" constant="186" id="5XX-3t-DNg"/>
                             <constraint firstItem="j89-jX-69e" firstAttribute="leading" secondItem="sLJ-Lw-K2Y" secondAttribute="leading" constant="20" id="6Ew-qt-aYt"/>
+                            <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="trailing" secondItem="XAb-Ch-Uho" secondAttribute="trailing" constant="100" id="Cry-GF-jG5"/>
+                            <constraint firstItem="XAb-Ch-Uho" firstAttribute="leading" secondItem="sLJ-Lw-K2Y" secondAttribute="leading" constant="100" id="FF4-Wr-9bs"/>
                             <constraint firstItem="j89-jX-69e" firstAttribute="top" secondItem="sLJ-Lw-K2Y" secondAttribute="top" id="FSa-EQ-3nu"/>
                             <constraint firstItem="3mT-mf-kE4" firstAttribute="leading" secondItem="sLJ-Lw-K2Y" secondAttribute="leading" constant="20" id="KxK-nt-XW2"/>
                             <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="bottom" secondItem="j89-jX-69e" secondAttribute="bottom" constant="700" id="YhC-OQ-X3b"/>
-                            <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="bottom" secondItem="3mT-mf-kE4" secondAttribute="bottom" constant="314" id="avi-d1-2ki"/>
+                            <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="bottom" secondItem="3mT-mf-kE4" secondAttribute="bottom" constant="350" id="avi-d1-2ki"/>
+                            <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="bottom" secondItem="XAb-Ch-Uho" secondAttribute="bottom" constant="23" id="iYc-23-Ayy"/>
                             <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="trailing" secondItem="3mT-mf-kE4" secondAttribute="trailing" constant="20" id="sCG-Tj-Wlw"/>
                             <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="trailing" secondItem="j89-jX-69e" secondAttribute="trailing" constant="20" id="wm8-r6-UTs"/>
                         </constraints>
@@ -265,11 +301,14 @@
                     <connections>
                         <outlet property="activityIndicator" destination="7US-VJ-Ejs" id="kPI-r9-92Y"/>
                         <outlet property="changeEmailField" destination="ohv-lu-7NO" id="Ins-37-HkI"/>
+                        <outlet property="deleteButton" destination="sle-OR-cuh" id="gPg-Gj-yNq"/>
+                        <outlet property="deleteIndicator" destination="Psk-yp-Pro" id="xNn-bM-Dbb"/>
                         <outlet property="submitButton" destination="A3w-E0-qPX" id="FZI-jc-llt"/>
                         <outlet property="userLabel" destination="yOd-SN-9be" id="m0r-NC-t9y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8k-WP-sCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="SC0-1d-U64" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2079.7101449275365" y="83.705357142857139"/>
         </scene>

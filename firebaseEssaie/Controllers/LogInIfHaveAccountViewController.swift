@@ -33,13 +33,15 @@ class LogInIfHaveAccountViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var submitButton: UIButton!
     
+    
+    
     @IBAction func goButton(_ sender: Any) {
         toggleActivityIndicator(shown: true)
         var email = emailField.text!
         var password = passwordField.text!
-        print(email)
+        
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-            self.toggleActivityIndicator(shown: false)
+        self!.toggleActivityIndicator(shown: false)
           guard let strongSelf = self else { return }
             
             let user = Auth.auth().currentUser
@@ -67,6 +69,7 @@ class LogInIfHaveAccountViewController: UIViewController {
     private func presentHome() {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoggedViewController") as? LoggedViewController
         self.navigationController?.pushViewController(vc!, animated: true)
+        
     }
 
 }
