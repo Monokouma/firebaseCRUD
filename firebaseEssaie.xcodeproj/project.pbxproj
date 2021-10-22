@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2714809F27218C45001AFDDB /* earth-day-icegif-6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2714809E27218C45001AFDDB /* earth-day-icegif-6.gif */; };
+		271480A127218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271480A027218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift */; };
+		271480A62721AB43001AFDDB /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271480A52721AB42001AFDDB /* BackgroundViewController.swift */; };
+		271480A82721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif in Resources */ = {isa = PBXBuildFile; fileRef = 271480A72721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif */; };
 		2749E70A271F28E1000AB05C /* LoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2749E709271F28E1000AB05C /* LoggedViewController.swift */; };
 		275BDD74271F0C2900C380C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 275BDD73271F0C2800C380C1 /* GoogleService-Info.plist */; };
 		27BF61C6271F08F90036CE9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BF61C5271F08F90036CE9F /* AppDelegate.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2714809E27218C45001AFDDB /* earth-day-icegif-6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "earth-day-icegif-6.gif"; path = "../../../../Desktop/earth-day-icegif-6.gif"; sourceTree = "<group>"; };
+		271480A027218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLaunchScreenViewController.swift; sourceTree = "<group>"; };
+		271480A52721AB42001AFDDB /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
+		271480A72721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 5eeea355389655.59822ff824b72.gif; path = ../../../../Desktop/5eeea355389655.59822ff824b72.gif; sourceTree = "<group>"; };
 		2749E709271F28E1000AB05C /* LoggedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedViewController.swift; sourceTree = "<group>"; };
 		275BDD73271F0C2800C380C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27BF61C2271F08F90036CE9F /* firebaseEssaie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firebaseEssaie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +60,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271480A227219C33001AFDDB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		27BF61B9271F08F90036CE9F = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +88,7 @@
 		27BF61C4271F08F90036CE9F /* firebaseEssaie */ = {
 			isa = PBXGroup;
 			children = (
+				271480A227219C33001AFDDB /* Extension */,
 				27F5F20927205B5A007711E0 /* firebaseEssaie.entitlements */,
 				27BF61D9271F0B380036CE9F /* Ressources */,
 				27BF61DB271F0B540036CE9F /* Models */,
@@ -87,6 +103,8 @@
 		27BF61D9271F0B380036CE9F /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				271480A72721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif */,
+				2714809E27218C45001AFDDB /* earth-day-icegif-6.gif */,
 				27BF61C5271F08F90036CE9F /* AppDelegate.swift */,
 				27BF61CE271F08FB0036CE9F /* Assets.xcassets */,
 				27BF61C7271F08F90036CE9F /* SceneDelegate.swift */,
@@ -100,6 +118,8 @@
 				27BF61C9271F08F90036CE9F /* ViewController.swift */,
 				27F52052271F1BB0009D9053 /* LogInIfHaveAccountViewController.swift */,
 				2749E709271F28E1000AB05C /* LoggedViewController.swift */,
+				271480A027218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift */,
+				271480A52721AB42001AFDDB /* BackgroundViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +223,8 @@
 				27BF61CF271F08FB0036CE9F /* Assets.xcassets in Resources */,
 				275BDD74271F0C2900C380C1 /* GoogleService-Info.plist in Resources */,
 				27BF61CD271F08F90036CE9F /* Main.storyboard in Resources */,
+				271480A82721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif in Resources */,
+				2714809F27218C45001AFDDB /* earth-day-icegif-6.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +296,10 @@
 			files = (
 				27BF61CA271F08F90036CE9F /* ViewController.swift in Sources */,
 				2749E70A271F28E1000AB05C /* LoggedViewController.swift in Sources */,
+				271480A127218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift in Sources */,
 				27BF61C6271F08F90036CE9F /* AppDelegate.swift in Sources */,
 				27F52053271F1BB0009D9053 /* LogInIfHaveAccountViewController.swift in Sources */,
+				271480A62721AB43001AFDDB /* BackgroundViewController.swift in Sources */,
 				27BF61C8271F08F90036CE9F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

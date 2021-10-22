@@ -15,7 +15,12 @@ class LogInIfHaveAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        gifImage.image = UIImage.gif(url: "https://animesher.com/orig/1/151/1514/15144/animesher.com_inspiration-japanese-background-1514485.gif")
+        self.navigationItem.hidesBackButton = false
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+            view.addGestureRecognizer(tapGestureRecognizer)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -28,11 +33,31 @@ class LogInIfHaveAccountViewController: UIViewController {
         Auth.auth().removeStateDidChangeListener(handle!)
     }
     
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var submitButton: UIButton!
     
+    @IBOutlet weak var gifImage: UIImageView!
     
     
     @IBAction func goButton(_ sender: Any) {
@@ -71,5 +96,9 @@ class LogInIfHaveAccountViewController: UIViewController {
         self.navigationController?.pushViewController(vc!, animated: true)
         
     }
-
+    
+    @IBAction func bckButton(_ sender: Any) {
+        
+    }
+    
 }

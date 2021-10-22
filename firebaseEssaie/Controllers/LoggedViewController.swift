@@ -16,9 +16,14 @@ class LoggedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        gifBackground.image = UIImage.gif(url: "https://nextshark.com/wp-content/uploads/2018/01/001.gif")
         updateLabelName()
         self.navigationItem.hidesBackButton = true
-        // Do any additional setup after loading the view.
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+            view.addGestureRecognizer(tapGestureRecognizer)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener({ auth, user in
@@ -29,11 +34,31 @@ class LoggedViewController: UIViewController {
         Auth.auth().removeStateDidChangeListener(handle!)
     }
     
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
     @IBOutlet weak var changeEmailField: UITextField!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var deleteIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var gifBackground: UIImageView!
     
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -82,4 +107,14 @@ class LoggedViewController: UIViewController {
             }
         })
     }
+    
+    @IBAction func goAwayButtonTapped(_ sender: UIButton) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BackgroundViewController") as? BackgroundViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+    }
+    
+    @IBAction func backToRegister(_ sender: Any) {
+    }
+    
 }
