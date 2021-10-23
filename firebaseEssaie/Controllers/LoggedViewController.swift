@@ -42,7 +42,7 @@ class LoggedViewController: UIViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+                self.view.frame.origin.y -= keyboardSize.height - 60
             }
         }
     }
@@ -53,68 +53,16 @@ class LoggedViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var changeEmailField: UITextField!
     @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet weak var deleteIndicator: UIActivityIndicatorView!
     @IBOutlet weak var gifBackground: UIImageView!
     
-    @IBOutlet weak var deleteButton: UIButton!
-    
     private func updateLabelName() {
-        let username = user?.email
+        let username = user?.displayName
         if let username = username {
             userLabel.text = "Welcome ! \(username)"
         }
     }
     
-    private func toggleActivityIndicator(shown: Bool) {
-        activityIndicator.isHidden = !shown
-        submitButton.isHidden = shown
-    }
     
-    private func toggleDeleteIndicator(show: Bool) {
-        deleteIndicator.isHidden = !show
-        deleteButton.isHidden = show
-    }
-    
-
-    @IBAction func changeEmailButton(_ sender: Any) {
-        toggleActivityIndicator(shown: true)
-        var email: String = ""
-        if let unwrappedField = changeEmailField.text {
-            email = unwrappedField
-        }
-        
-        Auth.auth().currentUser?.updateEmail(to: email) { error in
-            self.toggleActivityIndicator(shown: false)
-            if error == nil {
-                self.changeEmailField.text = ""
-                self.userLabel.text = "Welcome ! \(String(describing: self.user!.email!))"
-            }
-        }
-    }
-    
-    @IBAction func deleteButtonPressed(_ sender: Any) {
-        toggleDeleteIndicator(show: true)
-        user?.delete(completion: { error in
-            if let error = error {
-                print("errkr")
-            } else {
-                self.toggleDeleteIndicator(show: false)
-                print("account delete")
-            }
-        })
-    }
-    
-    @IBAction func goAwayButtonTapped(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BackgroundViewController") as? BackgroundViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
-        
-    }
-    
-    @IBAction func backToRegister(_ sender: Any) {
-    }
     
 }

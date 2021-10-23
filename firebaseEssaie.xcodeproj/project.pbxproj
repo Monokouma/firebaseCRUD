@@ -21,6 +21,7 @@
 		27BF61D2271F08FB0036CE9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BF61D0271F08FB0036CE9F /* LaunchScreen.storyboard */; };
 		27F52053271F1BB0009D9053 /* LogInIfHaveAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F52052271F1BB0009D9053 /* LogInIfHaveAccountViewController.swift */; };
 		27F5F20B27205B5B007711E0 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F5F20A27205B5B007711E0 /* HomeKit.framework */; };
+		27FFF2172722E5E70052443C /* ChooseNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFF2162722E5E70052443C /* ChooseNameViewController.swift */; };
 		F6EDA431D7A9712CFDE5154F /* Pods_firebaseEssaie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC1DF122F30F62F6C92F46C /* Pods_firebaseEssaie.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		27F52052271F1BB0009D9053 /* LogInIfHaveAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInIfHaveAccountViewController.swift; sourceTree = "<group>"; };
 		27F5F20927205B5A007711E0 /* firebaseEssaie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firebaseEssaie.entitlements; sourceTree = "<group>"; };
 		27F5F20A27205B5B007711E0 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		27FFF2162722E5E70052443C /* ChooseNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNameViewController.swift; sourceTree = "<group>"; };
 		3CC1DF122F30F62F6C92F46C /* Pods_firebaseEssaie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firebaseEssaie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8951936C1551FBEFA2E530 /* Pods-firebaseEssaie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebaseEssaie.debug.xcconfig"; path = "Target Support Files/Pods-firebaseEssaie/Pods-firebaseEssaie.debug.xcconfig"; sourceTree = "<group>"; };
 		F05D71A485C43590D4588BB0 /* Pods-firebaseEssaie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebaseEssaie.release.xcconfig"; path = "Target Support Files/Pods-firebaseEssaie/Pods-firebaseEssaie.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				2749E709271F28E1000AB05C /* LoggedViewController.swift */,
 				271480A027218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift */,
 				271480A52721AB42001AFDDB /* BackgroundViewController.swift */,
+				27FFF2162722E5E70052443C /* ChooseNameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				27BF61CA271F08F90036CE9F /* ViewController.swift in Sources */,
 				2749E70A271F28E1000AB05C /* LoggedViewController.swift in Sources */,
+				27FFF2172722E5E70052443C /* ChooseNameViewController.swift in Sources */,
 				271480A127218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift in Sources */,
 				27BF61C6271F08F90036CE9F /* AppDelegate.swift in Sources */,
 				27F52053271F1BB0009D9053 /* LogInIfHaveAccountViewController.swift in Sources */,

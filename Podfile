@@ -10,7 +10,7 @@ target 'firebaseEssaie' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'FirebaseUI/Auth'
-
+  pod 'Firebase/InAppMessaging'
   pod 'FirebaseUI/Google'
   pod 'FirebaseUI/Facebook'
   pod 'FirebaseUI/OAuth' # Used for Sign in with Apple, Twitter, etc

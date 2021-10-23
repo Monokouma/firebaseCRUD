@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F5949FC7-A6D7-44CF-AF8E-3A0A33E097AB"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C81DE6B-EBA1-43E0-B351-A6006EA5C21D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "firebaseEssaie/Controllers/LoggedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "updateLabelName()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5C81DE6B-EBA1-43E0-B351-A6006EA5C21D - 694c0dc07dcae134"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "firebaseEssaie.LoggedViewController.submitButton.getter : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "firebaseEssaie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/monokouma/Documents/firebaseEssaie/firebaseEssaie/Controllers/LoggedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "5C81DE6B-EBA1-43E0-B351-A6006EA5C21D - 21ca704aad335120"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "firebaseEssaie.LoggedViewController.submitButton.setter : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "firebaseEssaie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/monokouma/Documents/firebaseEssaie/firebaseEssaie/Controllers/LoggedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "5C81DE6B-EBA1-43E0-B351-A6006EA5C21D - f50f3acba6924d96"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "firebaseEssaie.LoggedViewController.submitButton.modify : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "firebaseEssaie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/monokouma/Documents/firebaseEssaie/firebaseEssaie/Controllers/LoggedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "5C81DE6B-EBA1-43E0-B351-A6006EA5C21D - e3d65a452fe129c9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "firebaseEssaie.LoggedViewController.submitButton.modify : Swift.Optional&lt;__C.UIButton&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "firebaseEssaie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/monokouma/Documents/firebaseEssaie/firebaseEssaie/Controllers/LoggedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "5C81DE6B-EBA1-43E0-B351-A6006EA5C21D - bc9d8661cf0fb3f1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "firebaseEssaie.LoggedViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; firebaseEssaie.LoggedViewController"
+                  moduleName = "firebaseEssaie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/monokouma/Documents/firebaseEssaie/firebaseEssaie/Controllers/LoggedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "5C81DE6B-EBA1-43E0-B351-A6006EA5C21D - 16d2ea042674e33"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "firebaseEssaie.LoggedViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;firebaseEssaie.LoggedViewController&gt;"
+                  moduleName = "firebaseEssaie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/monokouma/Documents/firebaseEssaie/firebaseEssaie/Controllers/LoggedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "372">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

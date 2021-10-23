@@ -379,6 +379,11 @@ PODS:
   - Firebase/Firestore (8.8.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 8.8.0)
+  - Firebase/InAppMessaging (8.8.0):
+    - Firebase/CoreOnly
+    - FirebaseInAppMessaging (~> 8.8.0-beta)
+  - FirebaseABTesting (8.8.0):
+    - FirebaseCore (~> 8.0)
   - FirebaseAnalytics (8.8.0):
     - FirebaseAnalytics/AdIdSupport (= 8.8.0)
     - FirebaseCore (~> 8.0)
@@ -438,6 +443,12 @@ PODS:
     - FirebaseAuthUI
     - FirebaseCore
     - GoogleSignIn (~> 6.0)
+  - FirebaseInAppMessaging (8.8.0-beta):
+    - FirebaseABTesting (~> 8.0)
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleUtilities/Environment (~> 7.4)
+    - nanopb (~> 2.30908.0)
   - FirebaseInstallations (8.8.0):
     - FirebaseCore (~> 8.0)
     - GoogleUtilities/Environment (~> 7.4)
@@ -547,6 +558,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
+  - Firebase/InAppMessaging
   - FirebaseUI/Auth
   - FirebaseUI/Facebook
   - FirebaseUI/Google
@@ -564,6 +576,7 @@ SPEC REPOS:
     - FBSDKCoreKit_Basics
     - FBSDKLoginKit
     - Firebase
+    - FirebaseABTesting
     - FirebaseAnalytics
     - FirebaseAuth
     - FirebaseAuthUI
@@ -572,6 +585,7 @@ SPEC REPOS:
     - FirebaseFacebookAuthUI
     - FirebaseFirestore
     - FirebaseGoogleAuthUI
+    - FirebaseInAppMessaging
     - FirebaseInstallations
     - FirebaseOAuthUI
     - FirebasePhoneAuthUI
@@ -598,6 +612,7 @@ SPEC CHECKSUMS:
   FBSDKCoreKit_Basics: 73ebe3a27eb688ac5b5aa7e99f68992993042115
   FBSDKLoginKit: 2e76831ef08d356b8f9150ea51cce865074ea304
   Firebase: 629510f1a9ddb235f3a7c5c8ceb23ba887f0f814
+  FirebaseABTesting: 981336dd14d84787e33466e4247f77ec2343f8d9
   FirebaseAnalytics: 5506ea8b867d8423485a84b4cd612d279f7b0b8a
   FirebaseAuth: bcf0adeff88bda5dcb3beeabe5760f1226ab7b2f
   FirebaseAuthUI: e75ef9d6cfcd8f1ba8bee2b360493a9947533f6c
@@ -606,6 +621,7 @@ SPEC CHECKSUMS:
   FirebaseFacebookAuthUI: a478313687c2001b53470d7cc265a48a2c504ab8
   FirebaseFirestore: 29baf05d5e7e0d5003eb34e5805d92b9858b36d4
   FirebaseGoogleAuthUI: 6981c0c3c054367f9ccd730fbcf483504deb0a68
+  FirebaseInAppMessaging: 9c4417ef987ca961a6e337f7eba57bbdb9f81885
   FirebaseInstallations: 2563cb18a723ef9c6ef18318a49519b75dce613c
   FirebaseOAuthUI: 8dc3d0270781133b10b2666d1163cd298501f453
   FirebasePhoneAuthUI: d84be4a096ddc19f9aace4a6ebcf80fe334f466b
@@ -623,6 +639,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: 73cb211745623c25f15eb69651174c0df59875ce
+PODFILE CHECKSUM: 062e8ffd8fc18656a258e08f0056cc03393ed4da
 
 COCOAPODS: 1.11.2

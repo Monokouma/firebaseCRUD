@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+                self.view.frame.origin.y -= keyboardSize.height - 60
             }
         }
     }
@@ -71,21 +71,54 @@ class ViewController: UIViewController {
         goButton.isHidden = shown
     }
     
-    @IBAction func goButton(_ sender: Any) {
-        toggleActivityIndicator(shown: true)
-        var email = emailTextField.text!
-        var password = passwordTextField.text!
+    fileprivate func connect(_ email: String, _ password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if error == nil {
                 self.toggleActivityIndicator(shown: false)
                 let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LogInIfHaveAccountViewController") as? LogInIfHaveAccountViewController
                 self.navigationController?.pushViewController(vc!, animated: true)
+                self.wrongEmailLabel.isHidden = true
+                self.wrongPasswordLabel.isHidden = true
+                self.emailTextField.text = ""
+                self.passwordTextField.text = ""
+            } else {
+                self.toggleActivityIndicator(shown: false)
+                self.wrongEmailLabel.isHidden = false
+                self.wrongEmailLabel.text = "Wrong email format please write a correct adress (Ex: test@test.com)"
             }
+        }
+    }
+    
+    @IBAction func goButton(_ sender: Any) {
+        toggleActivityIndicator(shown: true)
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        
+        if email.isEmpty == true {
+            self.toggleActivityIndicator(shown: false)
+            self.wrongEmailLabel.isHidden = false
+            self.emailTextField.text = ""
+            self.wrongEmailLabel.text = "Email can't be empty"
+        } else if password.isEmpty {
+            self.toggleActivityIndicator(shown: false)
+            self.passwordTextField.text = ""
+            self.wrongPasswordLabel.isHidden = false
+            self.wrongPasswordLabel.text = "Password can't be empty"
+        } else if password.count < 6 {
+            self.toggleActivityIndicator(shown: false)
+            self.toggleActivityIndicator(shown: false)
+            self.passwordTextField.text = ""
+            self.wrongPasswordLabel.isHidden = false
+            self.wrongPasswordLabel.text = "Password must be more than 6 characters"
+        } else {
+            self.toggleActivityIndicator(shown: false)
+            print("Passed !")
+            connect(email, password)
         }
         
         
-        print(email)
-        print(password)
+
+        
     }
     
     @IBAction func signInButton(_ sender: Any) {

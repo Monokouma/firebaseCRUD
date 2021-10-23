@@ -24,47 +24,47 @@
                                 <rect key="frame" x="20" y="294" width="374" height="418"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9g-8I-jwc">
-                                        <rect key="frame" x="164.5" y="0.0" width="45.5" height="35.5"/>
+                                        <rect key="frame" x="164.5" y="0.0" width="45.5" height="54"/>
                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                         <color key="textColor" red="0.069837041200000005" green="0.078531034289999996" blue="0.12559065220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong email format" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFG-we-DjA">
-                                        <rect key="frame" x="105.5" y="54.5" width="163" height="36"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong email format" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFG-we-DjA">
+                                        <rect key="frame" x="105.5" y="63.5" width="163" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="15"/>
                                         <color key="textColor" red="0.89234274629999999" green="0.20932805539999999" blue="0.18932116030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="blabla@blablamail.com" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="srY-S5-IQi">
-                                        <rect key="frame" x="40" y="109.5" width="294" height="35.5"/>
+                                        <rect key="frame" x="40" y="73" width="294" height="53.5"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rf1-dy-GPW">
-                                        <rect key="frame" x="151" y="164" width="72.5" height="35.5"/>
+                                        <rect key="frame" x="151" y="145.5" width="72.5" height="54"/>
                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                         <color key="textColor" red="0.069837041200000005" green="0.078531034289999996" blue="0.12559065220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kh-ZY-FLS">
-                                        <rect key="frame" x="105.5" y="218.5" width="163" height="35.5"/>
-                                        <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="15"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kh-ZY-FLS">
+                                        <rect key="frame" x="116.5" y="209" width="141" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="13"/>
                                         <color key="textColor" red="0.89234274629999999" green="0.20932805539999999" blue="0.18932116030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="monSuperMotDePasse" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fps-hq-q0Y">
-                                        <rect key="frame" x="40" y="273" width="294" height="36"/>
+                                        <rect key="frame" x="40" y="218.5" width="294" height="54"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="f9q-uN-zJC">
-                                        <rect key="frame" x="168.5" y="318.5" width="37" height="0.0"/>
+                                        <rect key="frame" x="168.5" y="282" width="37" height="0.0"/>
                                         <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhU-FB-FHI">
-                                        <rect key="frame" x="157" y="328" width="60.5" height="35.5"/>
+                                        <rect key="frame" x="157" y="291.5" width="60.5" height="53.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Go !">
                                             <fontDescription key="titleFontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
@@ -76,17 +76,17 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDA-Dr-Ab5">
-                                        <rect key="frame" x="30" y="382.5" width="314" height="35.5"/>
+                                        <rect key="frame" x="30" y="364" width="314" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dao-tQ-17s">
-                                                <rect key="frame" x="0.0" y="0.0" width="196" height="35.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="196" height="54"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="13"/>
                                                 <color key="textColor" red="0.069837041200000005" green="0.078531034289999996" blue="0.12559065220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqQ-yt-AST">
-                                                <rect key="frame" x="196" y="0.0" width="118" height="35.5"/>
+                                                <rect key="frame" x="196" y="0.0" width="118" height="54"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Sign-in here">
                                                     <fontDescription key="titleFontDescription" name="Menlo-Bold" family="Menlo" pointSize="13"/>
@@ -208,7 +208,12 @@
                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                         <color key="textColor" red="0.069837041200000005" green="0.078531034289999996" blue="0.12559065220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong credentials" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ew-1Q-LKp">
+                                        <rect key="frame" x="74.5" y="64.5" width="154" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="15"/>
+                                        <color key="textColor" red="0.89234274629999999" green="0.20932805539999999" blue="0.18932116030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="blabla@blablamail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ST9-3m-rgI">
                                         <rect key="frame" x="0.0" y="80" width="302.5" height="48.5"/>
@@ -220,7 +225,6 @@
                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                         <color key="textColor" red="0.069837041200000005" green="0.078531034289999996" blue="0.12559065220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="monSuperMotDePasse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hwO-lA-Dal">
                                         <rect key="frame" x="0.0" y="239.5" width="302.5" height="49"/>
@@ -295,12 +299,78 @@
                         <outlet property="gifImage" destination="zLd-KJ-aQC" id="N1I-nA-HTc"/>
                         <outlet property="passwordField" destination="hwO-lA-Dal" id="uFu-kX-qfr"/>
                         <outlet property="submitButton" destination="xpQ-js-MeT" id="mKp-Hy-Qbx"/>
+                        <outlet property="wrongCredentials" destination="6ew-1Q-LKp" id="PZh-0k-85d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ag8-KE-Ppx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="CVr-bJ-Aaw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1011.5942028985507" y="83.705357142857139"/>
+        </scene>
+        <!--Choose Name View Controller-->
+        <scene sceneID="k2q-P8-iNC">
+            <objects>
+                <viewController storyboardIdentifier="ChooseNameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1Wv-ej-PV9" customClass="ChooseNameViewController" customModule="firebaseEssaie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rbg-ft-QgS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tvw-y1-qtq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rOK-MF-Vhh">
+                                <rect key="frame" x="20" y="334" width="374" height="258"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqx-gQ-iD0">
+                                        <rect key="frame" x="119.5" y="0.0" width="135.5" height="69.5"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What should we call you?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEB-90-4FS">
+                                        <rect key="frame" x="40" y="94.5" width="294" height="69"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMA-dW-j7J">
+                                        <rect key="frame" x="89" y="188.5" width="196" height="69.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Call me like that !">
+                                            <fontDescription key="titleFontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                            <color key="baseBackgroundColor" red="0.29827522810000001" green="0.65998253500000004" blue="0.49983631639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="usernameButton:" destination="1Wv-ej-PV9" eventType="touchUpInside" id="SbJ-oC-hNC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EEB-90-4FS" firstAttribute="leading" secondItem="rOK-MF-Vhh" secondAttribute="leading" constant="40" id="Ghq-8V-0Vg"/>
+                                    <constraint firstAttribute="trailing" secondItem="EEB-90-4FS" secondAttribute="trailing" constant="40" id="L7G-aS-b3d"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n8E-Oa-tUf"/>
+                        <color key="backgroundColor" red="0.91756165030000003" green="0.87175643439999995" blue="0.85445970299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rOK-MF-Vhh" firstAttribute="top" secondItem="n8E-Oa-tUf" secondAttribute="top" constant="290" id="88w-pQ-OPt"/>
+                            <constraint firstItem="n8E-Oa-tUf" firstAttribute="bottom" secondItem="rOK-MF-Vhh" secondAttribute="bottom" constant="270" id="DxK-VY-JI2"/>
+                            <constraint firstAttribute="bottom" secondItem="Tvw-y1-qtq" secondAttribute="bottom" id="Ija-Te-Z4g"/>
+                            <constraint firstItem="Tvw-y1-qtq" firstAttribute="trailing" secondItem="n8E-Oa-tUf" secondAttribute="trailing" id="eJ5-SR-xGJ"/>
+                            <constraint firstItem="n8E-Oa-tUf" firstAttribute="trailing" secondItem="rOK-MF-Vhh" secondAttribute="trailing" constant="20" id="gCA-5n-jeh"/>
+                            <constraint firstItem="Tvw-y1-qtq" firstAttribute="top" secondItem="Rbg-ft-QgS" secondAttribute="top" id="lZS-WR-sog"/>
+                            <constraint firstItem="Tvw-y1-qtq" firstAttribute="leading" secondItem="n8E-Oa-tUf" secondAttribute="leading" id="qME-a8-9I9"/>
+                            <constraint firstItem="rOK-MF-Vhh" firstAttribute="leading" secondItem="n8E-Oa-tUf" secondAttribute="leading" constant="20" id="tqD-7z-BxU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gifImage" destination="Tvw-y1-qtq" id="2fD-YW-oWb"/>
+                        <outlet property="usernameField" destination="EEB-90-4FS" id="0wg-sk-V09"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7C-Gl-0OP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992.753623188406" y="83.705357142857139"/>
         </scene>
         <!--Logged View Controller-->
         <scene sceneID="50F-aI-Y1b">
@@ -316,7 +386,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="j89-jX-69e">
                                 <rect key="frame" x="20" y="44" width="374" height="118"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome &lt;UserName&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOd-SN-9be">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome &lt;UserName&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOd-SN-9be">
                                         <rect key="frame" x="78.5" y="0.0" width="217" height="118"/>
                                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
                                         <color key="textColor" red="0.069837041200000005" green="0.078531034289999996" blue="0.12559065220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -325,78 +395,26 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="3mT-mf-kE4">
-                                <rect key="frame" x="20" y="348" width="374" height="214"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="61" translatesAutoresizingMaskIntoConstraints="NO" id="Jpu-ow-yMv">
+                                <rect key="frame" x="60" y="786" width="294" height="76"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wanna change your email adress ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d47-cp-zr9">
-                                        <rect key="frame" x="23" y="0.0" width="328" height="19.5"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
-                                        <color key="textColor" red="0.069837041200000005" green="0.078531034289999996" blue="0.12559065220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ohv-lu-7NO">
-                                        <rect key="frame" x="40" y="56.5" width="294" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
-                                    </textField>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="7US-VJ-Ejs">
-                                        <rect key="frame" x="168.5" y="107" width="37" height="0.0"/>
-                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </activityIndicatorView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3w-E0-qPX">
-                                        <rect key="frame" x="148" y="125.5" width="78.5" height="29.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMH-2R-Co3">
+                                        <rect key="frame" x="0.0" y="22.5" width="116.5" height="31.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Submit">
-                                            <fontDescription key="titleFontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
-                                            <color key="baseBackgroundColor" red="0.29827522808775919" green="0.65998253501122162" blue="0.49983631635214099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="changeEmailButton:" destination="Vmg-5W-e2L" eventType="touchUpInside" id="rHF-TB-D07"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt3-U0-5dg">
-                                        <rect key="frame" x="143.5" y="192" width="87.5" height="22"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Go away">
+                                        <buttonConfiguration key="configuration" style="filled" title="Settings">
                                             <fontDescription key="titleFontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" red="0.29827522808775919" green="0.65998253501122162" blue="0.49983631635214099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.29827522810000001" green="0.65998253500000004" blue="0.49983631639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="goAwayButtonTapped:" destination="Vmg-5W-e2L" eventType="touchUpInside" id="SZs-xV-qR7"/>
-                                        </connections>
                                     </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ohv-lu-7NO" firstAttribute="leading" secondItem="3mT-mf-kE4" secondAttribute="leading" constant="40" id="J9D-zE-rtG"/>
-                                    <constraint firstAttribute="trailing" secondItem="ohv-lu-7NO" secondAttribute="trailing" constant="40" id="msH-Ox-AKQ"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="XAb-Ch-Uho">
-                                <rect key="frame" x="100" y="642" width="214" height="110"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wanna delete account ? (Irreversible)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpd-bI-RJj">
-                                        <rect key="frame" x="3" y="0.0" width="208" height="36"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Psk-yp-Pro">
-                                        <rect key="frame" x="97" y="36.5" width="20" height="0.0"/>
-                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </activityIndicatorView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sle-OR-cuh">
-                                        <rect key="frame" x="45.5" y="78.5" width="123.5" height="31.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRx-vT-DUJ">
+                                        <rect key="frame" x="177.5" y="22.5" width="116.5" height="31.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Delete it !">
+                                        <buttonConfiguration key="configuration" style="filled" title="Disconnect">
                                             <fontDescription key="titleFontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.89234274629999999" green="0.20932805539999999" blue="0.18932116030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="deleteButtonPressed:" destination="Vmg-5W-e2L" eventType="touchUpInside" id="fua-ax-EN2"/>
-                                            <segue destination="SC0-1d-U64" kind="unwind" unwindAction="unwindToWelcomeWithSegue:" id="i0a-CK-R7R"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -404,38 +422,116 @@
                         <viewLayoutGuide key="safeArea" id="sLJ-Lw-K2Y"/>
                         <color key="backgroundColor" red="0.91756165030000003" green="0.87175643439999995" blue="0.85445970299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="XAb-Ch-Uho" firstAttribute="top" secondItem="3mT-mf-kE4" secondAttribute="bottom" constant="80" id="3Ol-DZ-sg4"/>
-                            <constraint firstItem="3mT-mf-kE4" firstAttribute="top" secondItem="j89-jX-69e" secondAttribute="bottom" constant="186" id="5XX-3t-DNg"/>
                             <constraint firstItem="j89-jX-69e" firstAttribute="leading" secondItem="sLJ-Lw-K2Y" secondAttribute="leading" constant="20" id="6Ew-qt-aYt"/>
                             <constraint firstItem="sh0-bn-Z8z" firstAttribute="trailing" secondItem="sLJ-Lw-K2Y" secondAttribute="trailing" id="9rF-WJ-bIj"/>
-                            <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="trailing" secondItem="XAb-Ch-Uho" secondAttribute="trailing" constant="100" id="Cry-GF-jG5"/>
-                            <constraint firstItem="XAb-Ch-Uho" firstAttribute="leading" secondItem="sLJ-Lw-K2Y" secondAttribute="leading" constant="100" id="FF4-Wr-9bs"/>
                             <constraint firstItem="j89-jX-69e" firstAttribute="top" secondItem="sLJ-Lw-K2Y" secondAttribute="top" id="FSa-EQ-3nu"/>
                             <constraint firstAttribute="bottom" secondItem="sh0-bn-Z8z" secondAttribute="bottom" id="GtH-iY-npO"/>
-                            <constraint firstItem="3mT-mf-kE4" firstAttribute="leading" secondItem="sLJ-Lw-K2Y" secondAttribute="leading" constant="20" id="KxK-nt-XW2"/>
+                            <constraint firstItem="Jpu-ow-yMv" firstAttribute="bottom" secondItem="sLJ-Lw-K2Y" secondAttribute="bottom" id="UKs-R3-nnA"/>
                             <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="bottom" secondItem="j89-jX-69e" secondAttribute="bottom" constant="700" id="YhC-OQ-X3b"/>
                             <constraint firstItem="sh0-bn-Z8z" firstAttribute="top" secondItem="7HU-1y-JMV" secondAttribute="top" id="Yum-TW-meX"/>
-                            <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="bottom" secondItem="3mT-mf-kE4" secondAttribute="bottom" constant="300" id="avi-d1-2ki"/>
-                            <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="bottom" secondItem="XAb-Ch-Uho" secondAttribute="bottom" constant="110" id="iYc-23-Ayy"/>
-                            <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="trailing" secondItem="3mT-mf-kE4" secondAttribute="trailing" constant="20" id="sCG-Tj-Wlw"/>
+                            <constraint firstItem="Jpu-ow-yMv" firstAttribute="leading" secondItem="sLJ-Lw-K2Y" secondAttribute="leading" constant="60" id="cb2-pX-OBW"/>
+                            <constraint firstItem="Jpu-ow-yMv" firstAttribute="top" secondItem="j89-jX-69e" secondAttribute="bottom" constant="624" id="kRA-F4-cxo"/>
+                            <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="trailing" secondItem="Jpu-ow-yMv" secondAttribute="trailing" constant="60" id="tlI-Qe-gnl"/>
                             <constraint firstItem="sLJ-Lw-K2Y" firstAttribute="trailing" secondItem="j89-jX-69e" secondAttribute="trailing" constant="20" id="wm8-r6-UTs"/>
                             <constraint firstItem="sh0-bn-Z8z" firstAttribute="leading" secondItem="sLJ-Lw-K2Y" secondAttribute="leading" id="xbu-do-meM"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="7US-VJ-Ejs" id="kPI-r9-92Y"/>
-                        <outlet property="changeEmailField" destination="ohv-lu-7NO" id="Ins-37-HkI"/>
-                        <outlet property="deleteButton" destination="sle-OR-cuh" id="gPg-Gj-yNq"/>
-                        <outlet property="deleteIndicator" destination="Psk-yp-Pro" id="xNn-bM-Dbb"/>
                         <outlet property="gifBackground" destination="sh0-bn-Z8z" id="8nA-o2-wQp"/>
-                        <outlet property="submitButton" destination="A3w-E0-qPX" id="FZI-jc-llt"/>
                         <outlet property="userLabel" destination="yOd-SN-9be" id="m0r-NC-t9y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8k-WP-sCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="SC0-1d-U64" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2079.7101449275365" y="83.705357142857139"/>
+            <point key="canvasLocation" x="3024.6376811594205" y="83.705357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hFY-om-Xt9">
+            <objects>
+                <viewController id="1Xo-t1-PbF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2tv-qg-4dS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-rh-cS1">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update your settings here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t07-f8-DZC">
+                                        <rect key="frame" x="74" y="0.0" width="226" height="117"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uc-4x-dc0">
+                                        <rect key="frame" x="137" y="117" width="100.5" height="116.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ET5-JL-gZa">
+                                        <rect key="frame" x="31.5" y="233.5" width="311" height="117"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WCq-9W-Bhd">
+                                                <rect key="frame" x="0.0" y="41.5" width="209.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="et7-Z9-8GI">
+                                                <rect key="frame" x="239.5" y="43" width="71.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Update">
+                                                    <color key="baseBackgroundColor" red="0.29827522810000001" green="0.65998253500000004" blue="0.49983631639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlV-jE-0XN">
+                                        <rect key="frame" x="120.5" y="350.5" width="133.5" height="117"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5p-fN-fTm">
+                                        <rect key="frame" x="119" y="467.5" width="136" height="117"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete account ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zR3-cG-0f9">
+                                        <rect key="frame" x="123" y="584.5" width="128" height="116.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw0-cz-sVH">
+                                        <rect key="frame" x="154" y="701" width="66" height="117"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Delete">
+                                            <color key="baseBackgroundColor" red="0.89234274629999999" green="0.20932805539999999" blue="0.18932116030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ET5-JL-gZa" firstAttribute="leading" secondItem="oCe-rh-cS1" secondAttribute="leading" constant="31.5" id="Ja4-2P-sXJ"/>
+                                    <constraint firstItem="ET5-JL-gZa" firstAttribute="top" secondItem="8Uc-4x-dc0" secondAttribute="bottom" id="Zs7-7J-gg5"/>
+                                    <constraint firstAttribute="trailing" secondItem="ET5-JL-gZa" secondAttribute="trailing" constant="31.5" id="hty-Hp-Imt"/>
+                                    <constraint firstItem="KlV-jE-0XN" firstAttribute="top" secondItem="ET5-JL-gZa" secondAttribute="bottom" id="ma0-2e-rMr"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cvo-QQ-fkx"/>
+                        <color key="backgroundColor" red="0.91756165030000003" green="0.87175643439999995" blue="0.85445970299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cvo-QQ-fkx" firstAttribute="trailing" secondItem="oCe-rh-cS1" secondAttribute="trailing" constant="20" id="8cv-ey-sKm"/>
+                            <constraint firstItem="oCe-rh-cS1" firstAttribute="top" secondItem="Cvo-QQ-fkx" secondAttribute="top" id="Lk9-I1-wf7"/>
+                            <constraint firstItem="oCe-rh-cS1" firstAttribute="bottom" secondItem="Cvo-QQ-fkx" secondAttribute="bottom" id="PSk-E5-6AJ"/>
+                            <constraint firstItem="oCe-rh-cS1" firstAttribute="leading" secondItem="Cvo-QQ-fkx" secondAttribute="leading" constant="20" id="iGa-FF-YT5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Be0-tw-wZI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3889.8550724637685" y="83.705357142857139"/>
         </scene>
         <!--Background View Controller-->
         <scene sceneID="BjW-Cq-Cdu">
@@ -493,7 +589,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCM-E6-EXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ain-Up-sNU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3047.826086956522" y="83.705357142857139"/>
+            <point key="canvasLocation" x="4803" y="84"/>
         </scene>
     </scenes>
     <resources>
