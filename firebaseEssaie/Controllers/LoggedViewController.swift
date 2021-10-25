@@ -11,9 +11,18 @@ import Foundation
 
 class LoggedViewController: UIViewController {
 
+    //MARK: -Usefull var
     private let user = Auth.auth().currentUser
     private var handle: AuthStateDidChangeListenerHandle?
     
+    
+    //MARK: -@IBOutlet
+    @IBOutlet weak var disconnectButtonOutlet: UIButton!
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var gifBackground: UIImageView!
+    
+    
+    //MARK: -Life cycle controller
     override func viewDidLoad() {
         super.viewDidLoad()
         gifBackground.image = UIImage.gif(url: "https://nextshark.com/wp-content/uploads/2018/01/001.gif")
@@ -27,15 +36,33 @@ class LoggedViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         handle = Auth.auth().addStateDidChangeListener({ auth, user in
-            
         })
     }
     override func viewWillDisappear(_ animated: Bool) {
         Auth.auth().removeStateDidChangeListener(handle!)
     }
     
+   
+    //MARK: -@IBAction
+    @IBAction func settingsButton(_ sender: UIButton) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    @IBAction func disconnectButton(_ sender: UIButton) {
+        do {
+        try! Auth.auth().signOut()
+        print(Auth.auth().currentUser)
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewController") as? ViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+        } catch {
+            print("error")
+        }
+    }
+    
+    
+    //MARK: -@Objc Functions
     @objc func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
     
@@ -53,16 +80,12 @@ class LoggedViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var userLabel: UILabel!
-    @IBOutlet weak var gifBackground: UIImageView!
     
+    //MARK: -Function
     private func updateLabelName() {
         let username = user?.displayName
         if let username = username {
             userLabel.text = "Welcome ! \(username)"
         }
     }
-    
-    
-    
 }
