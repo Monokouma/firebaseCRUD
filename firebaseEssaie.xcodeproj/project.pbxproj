@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2714809F27218C45001AFDDB /* earth-day-icegif-6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2714809E27218C45001AFDDB /* earth-day-icegif-6.gif */; };
 		271480A127218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271480A027218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift */; };
 		271480A62721AB43001AFDDB /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271480A52721AB42001AFDDB /* BackgroundViewController.swift */; };
 		271480A82721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif in Resources */ = {isa = PBXBuildFile; fileRef = 271480A72721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif */; };
+		273104312726EFBB00E723C2 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 273104302726EFBB00E723C2 /* AppIcon.appiconset */; };
+		273104342726F4B800E723C2 /* 512x512bb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 273104332726F4B800E723C2 /* 512x512bb.jpg */; };
+		273104362726F4F500E723C2 /* index.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 273104352726F4F500E723C2 /* index.jpg */; };
+		273104382726F55600E723C2 /* pasted image 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 273104372726F55600E723C2 /* pasted image 0.png */; };
+		2731043A2726F57C00E723C2 /* me-in-8bit.png in Resources */ = {isa = PBXBuildFile; fileRef = 273104392726F57C00E723C2 /* me-in-8bit.png */; };
+		2731043C2726F5AA00E723C2 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731043B2726F5AA00E723C2 /* AvatarViewController.swift */; };
 		2749E70A271F28E1000AB05C /* LoggedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2749E709271F28E1000AB05C /* LoggedViewController.swift */; };
 		275BDD74271F0C2900C380C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 275BDD73271F0C2800C380C1 /* GoogleService-Info.plist */; };
 		27BA9FBE27269B7800FAF31F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BA9FBD27269B7800FAF31F /* SettingsViewController.swift */; };
@@ -27,10 +32,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2714809E27218C45001AFDDB /* earth-day-icegif-6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "earth-day-icegif-6.gif"; path = "../../../../Desktop/earth-day-icegif-6.gif"; sourceTree = "<group>"; };
 		271480A027218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedLaunchScreenViewController.swift; sourceTree = "<group>"; };
 		271480A52721AB42001AFDDB /* BackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 		271480A72721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 5eeea355389655.59822ff824b72.gif; path = ../../../../Desktop/5eeea355389655.59822ff824b72.gif; sourceTree = "<group>"; };
+		273104302726EFBB00E723C2 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+		273104332726F4B800E723C2 /* 512x512bb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 512x512bb.jpg; sourceTree = "<group>"; };
+		273104352726F4F500E723C2 /* index.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = index.jpg; sourceTree = "<group>"; };
+		273104372726F55600E723C2 /* pasted image 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pasted image 0.png"; sourceTree = "<group>"; };
+		273104392726F57C00E723C2 /* me-in-8bit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me-in-8bit.png"; sourceTree = "<group>"; };
+		2731043B2726F5AA00E723C2 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 		2749E709271F28E1000AB05C /* LoggedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedViewController.swift; sourceTree = "<group>"; };
 		275BDD73271F0C2800C380C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		27BA9FBD27269B7800FAF31F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +49,7 @@
 		27BF61C7271F08F90036CE9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		27BF61C9271F08F90036CE9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27BF61CC271F08F90036CE9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		27BF61CE271F08FB0036CE9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27BF61CE271F08FB0036CE9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = firebaseEssaie/Ressources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		27BF61D1271F08FB0036CE9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27BF61D3271F08FB0036CE9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27F52052271F1BB0009D9053 /* LogInIfHaveAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInIfHaveAccountViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +79,17 @@
 			children = (
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		273104322726F44A00E723C2 /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				273104392726F57C00E723C2 /* me-in-8bit.png */,
+				273104372726F55600E723C2 /* pasted image 0.png */,
+				273104352726F4F500E723C2 /* index.jpg */,
+				273104332726F4B800E723C2 /* 512x512bb.jpg */,
+			);
+			path = Avatar;
 			sourceTree = "<group>";
 		};
 		27BF61B9271F08F90036CE9F = {
@@ -107,8 +128,9 @@
 		27BF61D9271F0B380036CE9F /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				273104322726F44A00E723C2 /* Avatar */,
+				273104302726EFBB00E723C2 /* AppIcon.appiconset */,
 				271480A72721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif */,
-				2714809E27218C45001AFDDB /* earth-day-icegif-6.gif */,
 				27BF61C5271F08F90036CE9F /* AppDelegate.swift */,
 				27BF61CE271F08FB0036CE9F /* Assets.xcassets */,
 				27BF61C7271F08F90036CE9F /* SceneDelegate.swift */,
@@ -126,6 +148,7 @@
 				271480A52721AB42001AFDDB /* BackgroundViewController.swift */,
 				27FFF2162722E5E70052443C /* ChooseNameViewController.swift */,
 				27BA9FBD27269B7800FAF31F /* SettingsViewController.swift */,
+				2731043B2726F5AA00E723C2 /* AvatarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,12 +248,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273104382726F55600E723C2 /* pasted image 0.png in Resources */,
+				2731043A2726F57C00E723C2 /* me-in-8bit.png in Resources */,
+				273104362726F4F500E723C2 /* index.jpg in Resources */,
 				27BF61D2271F08FB0036CE9F /* LaunchScreen.storyboard in Resources */,
 				27BF61CF271F08FB0036CE9F /* Assets.xcassets in Resources */,
 				275BDD74271F0C2900C380C1 /* GoogleService-Info.plist in Resources */,
 				27BF61CD271F08F90036CE9F /* Main.storyboard in Resources */,
+				273104312726EFBB00E723C2 /* AppIcon.appiconset in Resources */,
 				271480A82721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif in Resources */,
-				2714809F27218C45001AFDDB /* earth-day-icegif-6.gif in Resources */,
+				273104342726F4B800E723C2 /* 512x512bb.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +332,7 @@
 				27FFF2172722E5E70052443C /* ChooseNameViewController.swift in Sources */,
 				271480A127218E7F001AFDDB /* AnimatedLaunchScreenViewController.swift in Sources */,
 				27BF61C6271F08F90036CE9F /* AppDelegate.swift in Sources */,
+				2731043C2726F5AA00E723C2 /* AvatarViewController.swift in Sources */,
 				27F52053271F1BB0009D9053 /* LogInIfHaveAccountViewController.swift in Sources */,
 				271480A62721AB43001AFDDB /* BackgroundViewController.swift in Sources */,
 				27BF61C8271F08F90036CE9F /* SceneDelegate.swift in Sources */,
@@ -456,6 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = firebaseEssaie/firebaseEssaie.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -487,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = firebaseEssaie/firebaseEssaie.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

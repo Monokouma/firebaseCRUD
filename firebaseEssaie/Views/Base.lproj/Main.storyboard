@@ -378,6 +378,104 @@
             </objects>
             <point key="canvasLocation" x="1992.753623188406" y="83.705357142857139"/>
         </scene>
+        <!--Avatar View Controller-->
+        <scene sceneID="2u4-dn-zYh">
+            <objects>
+                <viewController storyboardIdentifier="AvatarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xc6-Li-HWZ" customClass="AvatarViewController" customModule="firebaseEssaie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0aV-6h-3Hr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tkn-Tb-REv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jo4-1E-gYh">
+                                <rect key="frame" x="20" y="294" width="374" height="318"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose one avatar !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-L4-osY">
+                                        <rect key="frame" x="95" y="0.0" width="184.5" height="159"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mit-5v-mhq">
+                                        <rect key="frame" x="6" y="159" width="362" height="159"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="512x512bb.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Pgs-DN-QM3">
+                                                <rect key="frame" x="0.0" y="0.0" width="83" height="159"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Jyu-zo-JdH" appends="YES" id="s8R-c1-vqX"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="index.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Pwg-fY-tnw">
+                                                <rect key="frame" x="93" y="0.0" width="83" height="159"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="Jls-It-gNb" appends="YES" id="zbO-XY-bBU"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pasted image 0.png" translatesAutoresizingMaskIntoConstraints="NO" id="xG8-S2-KiT">
+                                                <rect key="frame" x="186" y="0.0" width="83" height="159"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="CRW-Ep-xgO" appends="YES" id="Nyl-Kc-feh"/>
+                                                </connections>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me-in-8bit.png" translatesAutoresizingMaskIntoConstraints="NO" id="kTM-zi-Qb1">
+                                                <rect key="frame" x="279" y="2.5" width="83" height="154"/>
+                                                <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="eIg-Ln-khe" appends="YES" id="pdC-iW-ESP"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Mit-5v-mhq" secondAttribute="trailing" constant="6" id="6oI-hH-jAH"/>
+                                    <constraint firstItem="Mit-5v-mhq" firstAttribute="leading" secondItem="jo4-1E-gYh" secondAttribute="leading" constant="6" id="cgX-Yc-Xb4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FQ6-SO-kgR"/>
+                        <color key="backgroundColor" red="0.91756165030000003" green="0.87175643439999995" blue="0.85445970299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tkn-Tb-REv" firstAttribute="trailing" secondItem="FQ6-SO-kgR" secondAttribute="trailing" id="ABt-4q-O69"/>
+                            <constraint firstAttribute="bottom" secondItem="tkn-Tb-REv" secondAttribute="bottom" id="DBe-M8-AfZ"/>
+                            <constraint firstItem="tkn-Tb-REv" firstAttribute="leading" secondItem="FQ6-SO-kgR" secondAttribute="leading" id="KyD-Zg-V0j"/>
+                            <constraint firstItem="jo4-1E-gYh" firstAttribute="leading" secondItem="FQ6-SO-kgR" secondAttribute="leading" constant="20" id="PPQ-mT-Og4"/>
+                            <constraint firstItem="tkn-Tb-REv" firstAttribute="top" secondItem="0aV-6h-3Hr" secondAttribute="top" id="WJt-YJ-cvK"/>
+                            <constraint firstItem="FQ6-SO-kgR" firstAttribute="trailing" secondItem="jo4-1E-gYh" secondAttribute="trailing" constant="20" id="aId-Sv-whK"/>
+                            <constraint firstItem="jo4-1E-gYh" firstAttribute="top" secondItem="FQ6-SO-kgR" secondAttribute="top" constant="250" id="jwd-zh-dw2"/>
+                            <constraint firstItem="FQ6-SO-kgR" firstAttribute="bottom" secondItem="jo4-1E-gYh" secondAttribute="bottom" constant="250" id="zrc-T3-zLC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nxq-kT-R1T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Jyu-zo-JdH">
+                    <connections>
+                        <action selector="imageOneTapped:" destination="xc6-Li-HWZ" id="MPZ-eW-RKw"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Jls-It-gNb">
+                    <connections>
+                        <action selector="imageTwoTapped:" destination="xc6-Li-HWZ" id="hh1-EA-Yum"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="CRW-Ep-xgO">
+                    <connections>
+                        <action selector="imageThreeTapped:" destination="xc6-Li-HWZ" id="hHc-WL-wqL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="eIg-Ln-khe">
+                    <connections>
+                        <action selector="imageFourTapped:" destination="xc6-Li-HWZ" id="ehF-Mn-mYM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2842.0289855072465" y="83.705357142857139"/>
+        </scene>
         <!--Logged View Controller-->
         <scene sceneID="50F-aI-Y1b">
             <objects>
@@ -456,7 +554,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8k-WP-sCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3024.6376811594205" y="83.705357142857139"/>
+            <point key="canvasLocation" x="3699" y="84"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="hFY-om-Xt9">
@@ -668,7 +766,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Be0-tw-wZI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3889.8550724637685" y="83.705357142857139"/>
+            <point key="canvasLocation" x="4564" y="84"/>
         </scene>
         <!--Background View Controller-->
         <scene sceneID="BjW-Cq-Cdu">
@@ -726,10 +824,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCM-E6-EXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ain-Up-sNU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4803" y="84"/>
+            <point key="canvasLocation" x="5477" y="84"/>
         </scene>
     </scenes>
     <resources>
+        <image name="512x512bb.jpg" width="512" height="512"/>
+        <image name="index.jpg" width="225" height="225"/>
+        <image name="me-in-8bit.png" width="153.60000610351562" height="153.60000610351562"/>
+        <image name="pasted image 0.png" width="261" height="261"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

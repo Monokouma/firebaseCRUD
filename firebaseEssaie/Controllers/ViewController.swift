@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
+import Firebase
 import SwiftGifOrigin
 
 class ViewController: UIViewController {

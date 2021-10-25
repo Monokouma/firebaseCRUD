@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
     //MARK: -Life cycle controller
     override func viewDidLoad() {
         super.viewDidLoad()
-        gifImage.image = UIImage.gif(url: "https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/tumblr_ngbasnF0bG1qze3hdo1_500.gif")
+        gifImage.image = UIImage.gif(url: "https://c.tenor.com/vVPZh-hkPDYAAAAd/sad-japan.gif")
         let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
             view.addGestureRecognizer(tapGestureRecognizer)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -37,11 +37,34 @@ class SettingsViewController: UIViewController {
     @IBAction func updateEmailButton(_ sender: UIButton) {
         dismissKeyboard()
         if let newEmail = changeEmailField.text {
-            Auth.auth().currentUser?.updateEmail(to: newEmail) { error in
-                self.changeEmailField.text = ""
-                self.emailErrorOrSuccess.text = "New email address : \(newEmail)"
-                self.emailErrorOrSuccess.textColor = .green
+            if newEmail.isEmpty == true {
                 self.emailErrorOrSuccess.isHidden = false
+            } else {
+                updateEmail(newEmail)
+            }
+        }
+    }
+    
+    @IBAction func updatePasswordButton(_ sender: UIButton) {
+        dismissKeyboard()
+        if let newPassword = changePasswordField.text {
+            if newPassword.isEmpty == true || newPassword.count < 6 {
+                self.passwordErrorOrSuccess.isHidden = false
+            } else {
+                updatePassword(newPassword)
+            }
+        }
+    }
+    
+    @IBAction func updateDisplayName(_ sender: UIButton) {
+        dismissKeyboard()
+        if let newName = changeUsernameField.text {
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.displayName = newName
+            if newName.isEmpty == true {
+                self.usernameErrorOrSuccess.isHidden = false
+            } else {
+                updateUsername(changeRequest, newName)
             }
         }
     }
@@ -54,34 +77,6 @@ class SettingsViewController: UIViewController {
           } else {
               print("Delete")
           }
-        }
-    }
-    
-    @IBAction func updatePasswordButton(_ sender: UIButton) {
-        dismissKeyboard()
-        if let newPassword = changePasswordField.text {
-            Auth.auth().currentUser?.updatePassword(to: newPassword) { error in
-              print("New password is : \(newPassword)")
-                self.changePasswordField.text = ""
-                self.passwordErrorOrSuccess.text = "Password changed successfully"
-                self.passwordErrorOrSuccess.textColor = .green
-                self.passwordErrorOrSuccess.isHidden = false
-            }
-        }
-    }
-    
-    @IBAction func updateDisplayName(_ sender: UIButton) {
-        dismissKeyboard()
-        if let newName = changeUsernameField.text {
-            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-            changeRequest?.displayName = newName
-            changeRequest?.commitChanges(completion: { error in
-                print("Name changed")
-                self.changeUsernameField.text = ""
-                self.usernameErrorOrSuccess.text = "New username : \(newName)"
-                self.usernameErrorOrSuccess.textColor = .green
-                self.usernameErrorOrSuccess.isHidden = false
-            })
         }
     }
     
@@ -108,5 +103,37 @@ class SettingsViewController: UIViewController {
         if self.view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
+    }
+    
+    
+    
+    //MARK: -Functions
+    fileprivate func updateEmail(_ newEmail: String) {
+        Auth.auth().currentUser?.updateEmail(to: newEmail) { error in
+            self.changeEmailField.text = ""
+            self.emailErrorOrSuccess.text = "New email address saved !"
+            self.emailErrorOrSuccess.textColor = .green
+            self.emailErrorOrSuccess.isHidden = false
+        }
+    }
+    
+    fileprivate func updatePassword(_ newPassword: String) {
+        Auth.auth().currentUser?.updatePassword(to: newPassword) { error in
+            print("New password is : \(newPassword)")
+            self.changePasswordField.text = ""
+            self.passwordErrorOrSuccess.text = "Password changed successfully"
+            self.passwordErrorOrSuccess.textColor = .green
+            self.passwordErrorOrSuccess.isHidden = false
+        }
+    }
+    
+    fileprivate func updateUsername(_ changeRequest: UserProfileChangeRequest?, _ newName: String) {
+        changeRequest?.commitChanges(completion: { error in
+            print("Name changed")
+            self.changeUsernameField.text = ""
+            self.usernameErrorOrSuccess.text = "New username : \(newName)"
+            self.usernameErrorOrSuccess.textColor = .green
+            self.usernameErrorOrSuccess.isHidden = false
+        })
     }
 }

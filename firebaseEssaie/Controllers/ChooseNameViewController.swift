@@ -40,7 +40,7 @@ class ChooseNameViewController: UIViewController {
             changeRequest?.displayName = username
             changeRequest?.commitChanges { error in
                 self.toggleActivityIndicator(shown: false)
-                self.presentHome()
+                self.presentAvatar()
                 print(Auth.auth().currentUser?.displayName)
             }
         }
@@ -76,6 +76,11 @@ class ChooseNameViewController: UIViewController {
     
     private func presentHome() {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoggedViewController") as? LoggedViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    private func presentAvatar() {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "AvatarViewController") as? AvatarViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
 }
