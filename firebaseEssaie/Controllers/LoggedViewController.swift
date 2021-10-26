@@ -18,8 +18,12 @@ class LoggedViewController: UIViewController {
     
     //MARK: -@IBOutlet
     @IBOutlet weak var disconnectButtonOutlet: UIButton!
-    @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var gifBackground: UIImageView!
+    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var creationDatelabel: UILabel!
+    
     
     
     //MARK: -Life cycle controller
@@ -27,8 +31,11 @@ class LoggedViewController: UIViewController {
         super.viewDidLoad()
         gifBackground.image = UIImage.gif(url: "https://nextshark.com/wp-content/uploads/2018/01/001.gif")
         updateLabelName()
+        updateEmail()
+        updateAvatar()
+        updateDateLabel()
         self.navigationItem.hidesBackButton = true
-        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisteringViewController.dismissKeyboard))
             view.addGestureRecognizer(tapGestureRecognizer)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -53,7 +60,7 @@ class LoggedViewController: UIViewController {
         do {
         try! Auth.auth().signOut()
         print(Auth.auth().currentUser)
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewController") as? ViewController
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisteringViewController") as? RegisteringViewController
         self.navigationController?.pushViewController(vc!, animated: true)
         } catch {
             print("error")
@@ -85,7 +92,45 @@ class LoggedViewController: UIViewController {
     private func updateLabelName() {
         let username = user?.displayName
         if let username = username {
-            userLabel.text = "Welcome ! \(username)"
+            usernameLabel.text = username
         }
     }
+    
+    private func updateEmail() {
+        let email = user?.email
+        if let email = email {
+            emailLabel.text = email
+        }
+    }
+    
+    private func updateDateLabel() {
+        let date = user?.metadata
+        let meta = date?.creationDate
+        if let meta = meta {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "YY/MM/dd"
+            let formatDate = formatter.string(from: meta)
+            print(formatDate)
+        }
+    }
+    
+    private func updateAvatar() {
+        let avatar = user?.photoURL
+        if let avatar = avatar {
+            let test = avatar
+            let result = String(test.absoluteString.dropFirst(8))
+            let url = URL(string: result)
+            DispatchQueue.global().async { [weak self] in
+                if let data = try? Data(contentsOf: url!) {
+                    if let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            self?.avatarImage.image = image
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
 }

@@ -13,20 +13,33 @@ class SettingsViewController: UIViewController {
 
     
     //MARK: -@IBOutlet
+    //Text Field
     @IBOutlet weak var changeEmailField: UITextField!
     @IBOutlet weak var changePasswordField: UITextField!
     @IBOutlet weak var changeUsernameField: UITextField!
+    //ImageView
     @IBOutlet weak var gifImage: UIImageView!
+    //Label
     @IBOutlet weak var emailErrorOrSuccess: UILabel!
     @IBOutlet weak var passwordErrorOrSuccess: UILabel!
     @IBOutlet weak var usernameErrorOrSuccess: UILabel!
+    //ActivityIndicator
+    @IBOutlet weak var emailActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var passwordActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var usernameActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var deleteActivityIndicator: UIActivityIndicatorView!
+    //Button
+    @IBOutlet weak var emailButtonOutlet: UIButton!
+    @IBOutlet weak var updateUsernameButton: UIButton!
+    @IBOutlet weak var passwordButtonOutlet: UIButton!
+    @IBOutlet weak var deleteButtonOutlet: UIButton!
     
     
     //MARK: -Life cycle controller
     override func viewDidLoad() {
         super.viewDidLoad()
         gifImage.image = UIImage.gif(url: "https://c.tenor.com/vVPZh-hkPDYAAAAd/sad-japan.gif")
-        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisteringViewController.dismissKeyboard))
             view.addGestureRecognizer(tapGestureRecognizer)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -39,19 +52,25 @@ class SettingsViewController: UIViewController {
         if let newEmail = changeEmailField.text {
             if newEmail.isEmpty == true {
                 self.emailErrorOrSuccess.isHidden = false
+                self.toggleActivityIndicatorEmail(shown: false)
             } else {
                 updateEmail(newEmail)
+                self.toggleActivityIndicatorEmail(shown: true)
             }
         }
     }
     
     @IBAction func updatePasswordButton(_ sender: UIButton) {
         dismissKeyboard()
+        toggleActivityIndicatorPassword(shown: true)
         if let newPassword = changePasswordField.text {
             if newPassword.isEmpty == true || newPassword.count < 6 {
                 self.passwordErrorOrSuccess.isHidden = false
+                self.toggleActivityIndicatorPassword(shown: false)
             } else {
                 updatePassword(newPassword)
+                self.toggleActivityIndicatorPassword(shown: true)
+                
             }
         }
     }
@@ -63,19 +82,27 @@ class SettingsViewController: UIViewController {
             changeRequest?.displayName = newName
             if newName.isEmpty == true {
                 self.usernameErrorOrSuccess.isHidden = false
+                self.toggleActivityIndicatorUsername(shown: false)
             } else {
                 updateUsername(changeRequest, newName)
+                self.toggleActivityIndicatorUsername(shown: true)
             }
         }
     }
     
     @IBAction func deleteButton(_ sender: UIButton) {
+        toggleActivityIndicatorDelete(shown: true)
         let user = Auth.auth().currentUser
         user?.delete { error in
           if let error = error {
             print("Error")
           } else {
-              print("Delete")
+            print("Delete")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.toggleActivityIndicatorDelete(shown: false)
+                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisteringViewController") as? RegisteringViewController
+                self.navigationController?.pushViewController(vc!, animated: true)
+            }
           }
         }
     }
@@ -114,6 +141,7 @@ class SettingsViewController: UIViewController {
             self.emailErrorOrSuccess.text = "New email address saved !"
             self.emailErrorOrSuccess.textColor = .green
             self.emailErrorOrSuccess.isHidden = false
+            self.toggleActivityIndicatorEmail(shown: false)
         }
     }
     
@@ -121,9 +149,10 @@ class SettingsViewController: UIViewController {
         Auth.auth().currentUser?.updatePassword(to: newPassword) { error in
             print("New password is : \(newPassword)")
             self.changePasswordField.text = ""
-            self.passwordErrorOrSuccess.text = "Password changed successfully"
+            self.passwordErrorOrSuccess.text = "Password changed !"
             self.passwordErrorOrSuccess.textColor = .green
             self.passwordErrorOrSuccess.isHidden = false
+            self.toggleActivityIndicatorPassword(shown: false)
         }
     }
     
@@ -134,6 +163,27 @@ class SettingsViewController: UIViewController {
             self.usernameErrorOrSuccess.text = "New username : \(newName)"
             self.usernameErrorOrSuccess.textColor = .green
             self.usernameErrorOrSuccess.isHidden = false
+            self.toggleActivityIndicatorUsername(shown: false)
         })
+    }
+    
+    private func toggleActivityIndicatorEmail(shown: Bool) {
+        emailActivityIndicator.isHidden = !shown
+        emailButtonOutlet.isHidden = shown
+    }
+    
+    private func toggleActivityIndicatorPassword(shown: Bool) {
+        passwordActivityIndicator.isHidden = !shown
+        passwordButtonOutlet.isHidden = shown
+    }
+    
+    private func toggleActivityIndicatorUsername(shown: Bool) {
+        usernameActivityIndicator.isHidden = !shown
+        updateUsernameButton.isHidden = shown
+    }
+    
+    private func toggleActivityIndicatorDelete(shown: Bool) {
+        deleteActivityIndicator.isHidden = !shown
+        deleteButtonOutlet.isHidden = shown
     }
 }

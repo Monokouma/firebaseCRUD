@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import SwiftGifOrigin
 
-class ViewController: UIViewController {
+class RegisteringViewController: UIViewController {
     
     //MARK: -Usefull var
     var handle: AuthStateDidChangeListenerHandle?
@@ -27,12 +27,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     
     
+    
+    
+    
     //MARK: -ViewController life cycle functions
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundImage.image = UIImage.gif(url: "https://cutewallpaper.org/21/anime-scenery-cherry-blossoms/Anime-Cherry-Blossom-Cute-Wallpaper-Ryanmartinproductions.com.gif")
         self.navigationItem.hidesBackButton = true
-        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisteringViewController.dismissKeyboard))
             view.addGestureRecognizer(tapGestureRecognizer)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -66,19 +69,19 @@ class ViewController: UIViewController {
             self.wrongPasswordLabel.text = "Password can't be empty"
         } else if password.count < 6 {
             self.toggleActivityIndicator(shown: false)
-            self.toggleActivityIndicator(shown: false)
+            
             self.passwordTextField.text = ""
             self.wrongPasswordLabel.isHidden = false
             self.wrongPasswordLabel.text = "Password must be more than 6 characters"
         } else {
-            self.toggleActivityIndicator(shown: false)
+            self.toggleActivityIndicator(shown: true)
             print("Passed !")
             connect(email, password)
         }
     }
     
     @IBAction func signInButton(_ sender: Any) {
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LogInIfHaveAccountViewController") as? LogInIfHaveAccountViewController
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LogInIfHaveAccountViewController") as? SignUpViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
@@ -116,7 +119,7 @@ class ViewController: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if error == nil {
                 self.toggleActivityIndicator(shown: false)
-                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LogInIfHaveAccountViewController") as? LogInIfHaveAccountViewController
+                let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LogInIfHaveAccountViewController") as? SignUpViewController
                 self.navigationController?.pushViewController(vc!, animated: true)
                 self.wrongEmailLabel.isHidden = true
                 self.wrongPasswordLabel.isHidden = true

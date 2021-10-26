@@ -23,8 +23,8 @@ class ChooseNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        gifImage.image = UIImage.gif(url: "https://lh3.googleusercontent.com/TxZSz1tPYcR--umTqbKDJvYm3MHxcix5uIAp4TCLIveCtP6abFs8J3J09sBRveD2HRkBjbH6Sv0bk6H55TiTxJhial6uE6xTq6A96Q=w600")
-        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        gifImage.image = UIImage.gif(url: "https://i.pinimg.com/originals/2d/44/e9/2d44e965dff94b7aa7a51fb42f25faf8.gif")
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisteringViewController.dismissKeyboard))
             view.addGestureRecognizer(tapGestureRecognizer)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -56,7 +56,7 @@ class ChooseNameViewController: UIViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height - 60
+                self.view.frame.origin.y -= keyboardSize.height - 180
             }
         }
     }
