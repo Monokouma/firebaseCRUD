@@ -111,6 +111,7 @@ class LoggedViewController: UIViewController {
             formatter.dateFormat = "YY/MM/dd"
             let formatDate = formatter.string(from: meta)
             print(formatDate)
+            creationDatelabel.text = formatDate
         }
     }
     
