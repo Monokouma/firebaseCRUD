@@ -12,4 +12,6 @@ of the app, you can update all settings (email, password, username and profile p
 You can also delete your account or just disconnect.
 
 #### Demo
-![grab-landing-page](https://github.com/Monokouma/firebaseCRUD/blob/main/5s0fha.gif)
+![Demo1](https://github.com/Monokouma/firebaseCRUD/blob/main/5s0fha.gif)
+![Demo2](https://github.com/Monokouma/firebaseCRUD/blob/main/5s0fnu.gif)
+![Demo3](https://github.com/Monokouma/firebaseCRUD/blob/main/5s0fry.gif)
