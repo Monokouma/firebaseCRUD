@@ -54,33 +54,15 @@ class RegisteringViewController: UIViewController {
     //MARK: -@IBAction
     @IBAction func goButton(_ sender: Any) {
         toggleActivityIndicator(shown: true)
+        dismissKeyboard()
         let email = emailTextField.text!
         let password = passwordTextField.text!
         
-        if email.isEmpty == true {
-            self.toggleActivityIndicator(shown: false)
-            self.wrongEmailLabel.isHidden = false
-            self.emailTextField.text = ""
-            self.wrongEmailLabel.text = "Email can't be empty"
-        } else if password.isEmpty {
-            self.toggleActivityIndicator(shown: false)
-            self.passwordTextField.text = ""
-            self.wrongPasswordLabel.isHidden = false
-            self.wrongPasswordLabel.text = "Password can't be empty"
-        } else if password.count < 6 {
-            self.toggleActivityIndicator(shown: false)
-            
-            self.passwordTextField.text = ""
-            self.wrongPasswordLabel.isHidden = false
-            self.wrongPasswordLabel.text = "Password must be more than 6 characters"
-        } else {
-            self.toggleActivityIndicator(shown: true)
-            print("Passed !")
-            connect(email, password)
-        }
+        checkCredentials(email, password)
     }
     
     @IBAction func signInButton(_ sender: Any) {
+        dismissKeyboard()
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LogInIfHaveAccountViewController") as? SignUpViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
@@ -130,6 +112,32 @@ class RegisteringViewController: UIViewController {
                 self.wrongEmailLabel.isHidden = false
                 self.wrongEmailLabel.text = "Wrong email format please write a correct adress (Ex: test@test.com)"
             }
+        }
+    }
+    
+    fileprivate func checkCredentials(_ email: String, _ password: String) {
+        if email.isEmpty == true {
+            self.toggleActivityIndicator(shown: false)
+            self.wrongEmailLabel.isHidden = false
+            self.emailTextField.text = ""
+            self.wrongEmailLabel.text = "Email can't be empty"
+        } else if password.isEmpty {
+            self.toggleActivityIndicator(shown: false)
+            self.passwordTextField.text = ""
+            self.wrongPasswordLabel.isHidden = false
+            self.wrongPasswordLabel.text = "Password can't be empty"
+        } else if password.count < 6 {
+            self.toggleActivityIndicator(shown: false)
+            
+            self.passwordTextField.text = ""
+            self.wrongPasswordLabel.isHidden = false
+            self.wrongPasswordLabel.text = "Password must be more than 6 characters"
+        } else {
+            self.toggleActivityIndicator(shown: true)
+            print("Passed !")
+            self.emailTextField.text = ""
+            self.passwordTextField.text = ""
+            connect(email, password)
         }
     }
 }

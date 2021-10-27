@@ -34,12 +34,14 @@ class ChooseNameViewController: UIViewController {
     //MARK: -@IBAction
     @IBAction func usernameButton(_ sender: Any) {
         toggleActivityIndicator(shown: true)
+        dismissKeyboard()
         let username = usernameField.text
         let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
         if let username = username {
             changeRequest?.displayName = username
             changeRequest?.commitChanges { error in
                 self.toggleActivityIndicator(shown: false)
+                self.usernameField.text = ""
                 self.presentAvatar()
                 print(Auth.auth().currentUser?.displayName)
             }

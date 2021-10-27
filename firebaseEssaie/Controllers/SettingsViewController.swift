@@ -70,7 +70,6 @@ class SettingsViewController: UIViewController {
             } else {
                 updatePassword(newPassword)
                 self.toggleActivityIndicatorPassword(shown: true)
-                
             }
         }
     }
@@ -111,6 +110,12 @@ class SettingsViewController: UIViewController {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoggedViewController") as? LoggedViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
+    
+    @IBAction func changeAvatarButton(_ sender: UIButton) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "AvatarViewController") as? AvatarViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     
     
     //MARK: -@objc func
@@ -186,4 +191,23 @@ class SettingsViewController: UIViewController {
         deleteActivityIndicator.isHidden = !shown
         deleteButtonOutlet.isHidden = shown
     }
+    /* /* Begin PBXResourcesBuildPhase section */
+     27BF61C0271F08F90036CE9F /* Resources */ = {
+         isa = PBXResourcesBuildPhase;
+         buildActionMask = 2147483647;
+         files = (
+             270BE6932729548000B7F926 /* Media.xcassets in Resources */,
+             273104382726F55600E723C2 /* pasted image 0.png in Resources */,
+             2731043A2726F57C00E723C2 /* me-in-8bit.png in Resources */,
+             27BF61D2271F08FB0036CE9F /* LaunchScreen.storyboard in Resources */,
+             275D4D6F27284BDE0061A399 /* bdc0f3d3a06908148d59c58553bad6d98618f4ber1-1712-1712v2_128.jpg in Resources */,
+             275BDD74271F0C2900C380C1 /* GoogleService-Info.plist in Resources */,
+             27BF61CD271F08F90036CE9F /* Main.storyboard in Resources */,
+             273104312726EFBB00E723C2 /* AppIcon.appiconset in Resources */,
+             271480A82721B617001AFDDB /* 5eeea355389655.59822ff824b72.gif in Resources */,
+             273104342726F4B800E723C2 /* 512x512bb.jpg in Resources */,
+         );
+         runOnlyForDeploymentPostprocessing = 0;
+     };
+/* End PBXResourcesBuildPhase section */*/
 }

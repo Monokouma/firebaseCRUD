@@ -23,6 +23,8 @@ class LoggedViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var creationDatelabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var signOutOutlet: UIButton!
     
     
     
@@ -57,14 +59,13 @@ class LoggedViewController: UIViewController {
     }
     
     @IBAction func disconnectButton(_ sender: UIButton) {
-        do {
-        try! Auth.auth().signOut()
-        print(Auth.auth().currentUser)
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisteringViewController") as? RegisteringViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
-        } catch {
-            print("error")
-        }
+        toggleActivityIndicator(shown: true)
+            try! Auth.auth().signOut()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        self.toggleActivityIndicator(shown: false)
+                        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisteringViewController") as? RegisteringViewController
+                        self.navigationController?.pushViewController(vc!, animated: true)
+            }
     }
     
     
@@ -108,7 +109,7 @@ class LoggedViewController: UIViewController {
         let meta = date?.creationDate
         if let meta = meta {
             let formatter = DateFormatter()
-            formatter.dateFormat = "YY/MM/dd"
+            formatter.dateFormat = "dd/MM/YYYY"
             let formatDate = formatter.string(from: meta)
             print(formatDate)
             creationDatelabel.text = formatDate
@@ -122,16 +123,21 @@ class LoggedViewController: UIViewController {
             let result = String(test.absoluteString.dropFirst(8))
             let url = URL(string: result)
             DispatchQueue.global().async { [weak self] in
-                if let data = try? Data(contentsOf: url!) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.avatarImage.image = image
-                        }
-                    }
+                guard let data = try? Data(contentsOf: url!) else {
+                    return
+                }
+                guard let image = UIImage(data: data) else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self?.avatarImage.image = image
                 }
             }
         }
     }
     
-    
+    private func toggleActivityIndicator(shown: Bool) {
+        activityIndicator.isHidden = !shown
+        signOutOutlet.isHidden = shown
+    }
 }

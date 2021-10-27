@@ -48,12 +48,15 @@ class SignUpViewController: UIViewController {
     //MARK: -@IBAction
     @IBAction func goButton(_ sender: Any) {
         toggleActivityIndicator(shown: true)
+        dismissKeyboard()
         var email = emailField.text!
         var password = passwordField.text!
         connect(email, password)
     }
     
-    @IBAction func bckButton(_ sender: Any) {}
+    @IBAction func bckButton(_ sender: Any) {
+        dismissKeyboard()
+    }
     
     
     //MARK: -@objc functions
@@ -97,24 +100,23 @@ class SignUpViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             self!.toggleActivityIndicator(shown: false)
             guard let strongSelf = self else { return }
-            let user = Auth.auth().currentUser
-            if let user = user {
-                let uid = user.uid
-                let email = user.email
-                print(uid)
-                print(email!)
-            }
             if authResult != nil {
                 print("if")
                 let newUser = Auth.auth().currentUser!
                 if newUser.displayName != nil {
                     self!.presentHome()
+                    self!.emailField.text = ""
+                    self!.passwordField.text = ""
                 } else {
                     self!.presentChangeName()
+                    self!.emailField.text = ""
+                    self!.passwordField.text = ""
                 }
             } else {
                 self!.wrongCredentials.isHidden = false
                 print("marche pas")
+                self!.emailField.text = ""
+                self!.passwordField.text = ""
             }
         }
     }
